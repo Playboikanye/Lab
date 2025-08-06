@@ -1,10 +1,11 @@
-s1=str(input("enter the string\n"))
-l=s1.split()
-c=0
-dic={}
-for i in range(len(l)):
-    for j in range(len(l[i])):
-        if l[j]==l[j]:
-            c+=1
-    dic[l[i]]=c
+s1 = input("Enter the string:\n")
+l = s1.split()
+dic = {}
+
+for word in l:
+    if word in dic:
+        dic[word] += 1
+    else:
+        dic[word] = 1
+
 print(dic)
