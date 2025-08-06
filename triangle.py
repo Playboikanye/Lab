@@ -3,6 +3,7 @@ a=0
 k=turtle.Turtle()
 num=turtle.numinput("NO.","Enter the no0. of triangles",default=2,minval=1)
 a=num 
+k.width(10)
 k.begin_fill() 
 for j in range(int(a)):
     n=turtle.numinput("Size","Enter the size of the side:",default=100,minval=50)
