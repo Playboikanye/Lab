@@ -1,29 +1,19 @@
 import turtle
 
-def draw_petal(t, radius, angle):
+def draw_petal(t, r, a):
     for _ in range(2):
-        t.circle(radius, angle)
-        t.left(180 - angle)
-
-def draw_flower(petals=5, radius=100, angle=60):
+        t.circle(r, a)
+        t.left(180 - a)
+def draw_flower(petals):
     t = turtle.Turtle()
-    t.speed(3)
     t.color("magenta")
-
     for _ in range(petals):
-        draw_petal(t, radius, angle)
+        draw_petal(t, 100, 60)
         t.left(360 / petals)
-
     t.hideturtle()
     turtle.done()
+n=turtle.numinput("NO.","Enter the no0. of petals",default=5,minval=5)
+draw_flower(n)
+turtle.exitonclick()
 
-user_input = turtle.textinput("Petal Input", "Enter the number of petals:")
 
-if user_input and user_input.isdigit():
-    petal_count = int(user_input)
-    if petal_count > 0:
-        draw_flower(petals=petal_count)
-    else:
-        print("Please enter a positive number.")
-else:
-    print("Invalid input or canceled.")
